@@ -1,0 +1,8 @@
+streamlit
+pandas
+altair
+pydantic
+openai
+google-generativeai
+anthropic
+groq
