@@ -204,7 +204,7 @@ def analyze_batch(provider, api_key, df):
         if provider == "Google Gemini":
             if not genai: st.error("Library `google-generativeai` not installed."); return None
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash', 
+            model = genai.GenerativeModel('gemini-2.5-flash', 
                 generation_config={"response_mime_type": "application/json"})
             response = model.generate_content(f"{system_prompt}\n\nDATA:\n{text_blob}")
             return BatchAnalysis(**json.loads(response.text))
